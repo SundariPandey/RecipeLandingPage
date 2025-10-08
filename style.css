@@ -1,0 +1,204 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #e9c1e3;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #e06565ab;
+  padding: 20px;
+  text-align: center;
+  color: #332525;
+  border-bottom: 3px solid #290688;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #1737c2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: rgb(85, 10, 10);
+}
+
+/* ===== Welcome Card ===== */
+.welcome-card {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(46,42,42,0.6)),
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80')
+              center/cover no-repeat;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-card h2 {
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: #fffbfb;
+}
+
+.welcome-card p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #fdfcfd;
+}
+
+/* ===== Button ===== */
+.recipe-btn {
+  background-color: #220209;
+  color: #ecefef;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recipe-btn:hover {
+  background-color: #1d1792;
+  color: aqua;
+  transform: translateY(-3px);
+}
+
+/* ===== Feature Section ===== */
+.feature-section {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+  background-color: #dcecec;
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+}
+
+.feature-section div {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-section div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #8c4be2;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #000;
+}
+
+/* ===== Recipe Section ===== */
+.recipe-section {
+  padding: 50px 20px;
+  margin: 40px 0;
+  text-align: center;
+  background-color: #f4f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  background-color: #866bb1;
+  color: #fff;
+}
+
+/* ===== Contact Section ===== */
+.detail {
+  background-color: #d1e7e7;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+}
+
+.detail h2 {
+  font-size: 1.4em;
+  margin-bottom: 8px;
+  color: #0a0909;
+  text-decoration: underline;
+}
+
+.detail p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #6e0000;
+}
+
+.detail a:hover {
+  color: #dd1515;
+  text-decoration: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ffe0e9;
+  color: #000;
+  border-radius: 8px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Media Queries ===== */
+@media (max-width:720px){
+  .feature-section,
+  .welcome-card,
+  .detail {
+    width: 90%;
+  }
+}
